@@ -21,6 +21,11 @@
         <activity android:name=".login"></activity>
         <activity android:name=".erro_login"></activity>
         <activity android:name=".sucesso_login"></activity>
+        <activity android:name=".sobre"></activity>
+        <activity android:name=".cadastro"></activity>
+        <activity android:name=".erro_cadastro"></activity>
+        <activity android:name=".sucesso_cadastro"></activity>
+
     </application>
 
 </manifest>

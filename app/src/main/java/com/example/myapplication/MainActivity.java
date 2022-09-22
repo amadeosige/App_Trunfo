@@ -21,4 +21,14 @@ public class MainActivity extends AppCompatActivity {
 
         startActivity(telaLogin);
     }
+
+    public void sobre_main (View v){
+        Intent telaSobre = new Intent(this, sobre.class);
+        startActivity(telaSobre);
+    }
+
+    public void cadastro (View v){
+        Intent cadastro = new Intent(this, cadastro.class);
+        startActivity(cadastro);
+    }
 }

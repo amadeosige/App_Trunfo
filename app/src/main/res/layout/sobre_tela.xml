@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="50dp"
-    android:onClick="login"
-    tools:context=".sucesso_login">
+    tools:context=".sobre">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,7 +18,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="5"
             android:gravity="center"
-            android:text="Login Realizado com Sucesso"
+            android:text="Amadeo Zanon"
             android:textSize="34sp" />
 
         <Button
@@ -29,7 +28,17 @@
             android:layout_marginTop="50dp"
             android:layout_marginBottom="50dp"
             android:layout_weight="2"
-            android:text="SOBRE"
-            android:onClick="sobre"/>
+            android:onClick="ftec"
+            android:text="FTEC" />
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="50dp"
+            android:layout_weight="2"
+            android:text="BOAS VINDAS"
+            android:onClick="boasVindas"/>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,23 +4,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/button2"
+    <TextView
+        android:id="@+id/nomeCadastroSucesso"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="50dp"
         android:layout_weight="1"
-        android:onClick="loginsss"
-        android:text="LOGIN" />
+        android:gravity="center"
+        android:text="Erro no Cadastro, os seguintes campos estão incorretos:"
+        android:textSize="20sp" />
 
-    <Button
-        android:id="@+id/button3"
+    <TextView
+        android:id="@+id/erros"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="50dp"
         android:layout_weight="1"
-        android:onClick="cadastro"
-        android:text="CADASTRO" />
+        android:gravity="center"
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/button4"
@@ -28,6 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="50dp"
         android:layout_weight="1"
-        android:onClick="sobre_main"
-        android:text="SOBRE" />
+        android:onClick="voltar"
+        android:text="VOLTAR" />
+
 </LinearLayout>
