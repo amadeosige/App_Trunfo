@@ -18,6 +18,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".login"></activity>
+        <activity android:name=".erro_login"></activity>
+        <activity android:name=".sucesso_login"></activity>
     </application>
 
 </manifest>

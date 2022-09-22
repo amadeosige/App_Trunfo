@@ -3,8 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/zanon/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/zanon/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/zanon/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/boas_vindas.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/zanon/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/erroLogin.xml" value="0.33" />
+        <entry key="..\:/Users/zanon/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/erro_login.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/zanon/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/erro_login_tela.xml" value="0.25" />
         <entry key="..\:/Users/zanon/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/ex2.xml" value="0.25" />
+        <entry key="..\:/Users/zanon/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/login.xml" value="0.1" />
+        <entry key="..\:/Users/zanon/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/sucessoLogin.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/zanon/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/sucesso_login.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/zanon/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/sucesso_login_tela.xml" value="0.36666666666666664" />
       </map>
     </option>
   </component>
