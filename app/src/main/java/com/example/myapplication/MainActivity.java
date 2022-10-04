@@ -17,18 +17,14 @@ public class MainActivity extends AppCompatActivity {
 
     public void loginsss (View v){
 
-        Intent telaLogin = new Intent(this, login.class);
 
-        startActivity(telaLogin);
     }
 
     public void sobre_main (View v){
-        Intent telaSobre = new Intent(this, sobre.class);
-        startActivity(telaSobre);
+
     }
 
     public void cadastro (View v){
-        Intent cadastro = new Intent(this, cadastro.class);
-        startActivity(cadastro);
+
     }
 }
