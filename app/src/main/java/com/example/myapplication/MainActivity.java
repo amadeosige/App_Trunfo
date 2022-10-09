@@ -1,45 +1,31 @@
 package com.example.myapplication;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
+import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.user_edit);
+        setContentView(R.layout.login);
+    }
 
+    public void loginUser (View v){
+        TextView user = (TextView) findViewById(R.id.userInput);
+        TextView password = (TextView) findViewById(R.id.passwordInput);
 
-        BottomNavigationView bottomNavigationView = (BottomNavigationView)findViewById(R.id.bottom_navigation);
-        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(MenuItem menuItem) {
-                switch (menuItem.getItemId()){
-                    case R.id.action_stats:
-                        Toast.makeText(MainActivity.this, "Estatisticas", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case R.id.action_edit:
-                        Toast.makeText(MainActivity.this, "Editar", Toast.LENGTH_SHORT).show();
-                        break;
-
-                    case R.id.action_play:
-                        Toast.makeText(MainActivity.this, "Jogar", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                return true;
-            }
-        });
+        if(user.getText().toString().equals("Amadeo") && password.getText().toString().equals("1234")){
+            Intent telaSucesso = new Intent(this, UserEdit.class);
+            startActivity(telaSucesso);
+        } else {
+            Toast.makeText(MainActivity.this, "Usuário ou Senha Incorreta", Toast.LENGTH_SHORT).show();
+        }
     }
 
 }
