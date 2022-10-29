@@ -1,7 +1,10 @@
 package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.app.ProgressDialog;
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -20,12 +23,12 @@ public class MainActivity extends AppCompatActivity {
         TextView user = (TextView) findViewById(R.id.userInput);
         TextView password = (TextView) findViewById(R.id.passwordInput);
 
-        if(user.getText().toString().equals("Amadeo") && password.getText().toString().equals("1234")){
+        //if(user.getText().toString().equals("Amadeo") && password.getText().toString().equals("1234")){
             Intent telaSucesso = new Intent(this, UserEdit.class);
             startActivity(telaSucesso);
-        } else {
-            Toast.makeText(MainActivity.this, "Usuário ou Senha Incorreta", Toast.LENGTH_SHORT).show();
-        }
+        //} else {
+        //    Toast.makeText(MainActivity.this, "Usuário ou Senha Incorreta", Toast.LENGTH_SHORT).show();
+        //}
     }
-
 }
+
