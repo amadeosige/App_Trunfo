@@ -118,6 +118,7 @@ public class UserEdit extends AppCompatActivity {
             return util.getUserJson("http://10.0.2.2:3000/user/editUser?" +
                     "originalUserName=" + originalUserName +
                     "&userName=" + newUserName +
+
                     "&password=" + newPassword +
                     "&ranking=" + ranking);
         }

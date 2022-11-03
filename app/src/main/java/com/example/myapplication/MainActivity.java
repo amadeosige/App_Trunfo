@@ -46,7 +46,10 @@ public class MainActivity extends AppCompatActivity {
             Utils util = new Utils();
 
             return util.getUserJson("http://10.0.2.2:3000/user/getUser?userName=" + userName);
-            //esse ip é o que o android identifica como o localhost do meu pc
+
+            //pra testar localmente pelo emulador é esse ip aqui 10.0.2.2
+            //pra fazer pelo celular msm tem que fazer o hotspot do notebook, conectar o celular e dar um ipconfig do notebook e ver qual ip dele na rede pra jogar no código
+            //o que era quando eu testei na facul era esse: 192.168.137.1
         }
 
         @Override
