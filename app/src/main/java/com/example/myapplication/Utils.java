@@ -22,7 +22,7 @@ public class Utils {
         return json;
     }
 
-    public ArrayList<UserModel> getUserJson(String end){
+    public ArrayList<UserModel> getUserJsonList(String end){
         try {
 
             String json;
@@ -48,6 +48,28 @@ public class Utils {
             return null;
         }
     }
+
+    public UserModel getUserJson(String end){
+        try {
+
+            String json;
+            json = NetworkUtils.getJSONFromAPI(end);
+            JSONObject jsonObj = new JSONObject(json);
+
+            UserModel user = new UserModel(
+                    jsonObj.getString("userName"),
+                    jsonObj.getString("password"),
+                    jsonObj.getString("image"),
+                    Integer.parseInt(jsonObj.getString("ranking")));
+
+            return user;
+        }catch (JSONException e){
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+
 
     private Bitmap baixarImagem(String url) {
         try{

@@ -82,7 +82,7 @@
                             android:id="@+id/textView3"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Usuário"
+                            android:text="Senha"
                             android:textColor="#000000"
                             android:textSize="20sp" />
 
@@ -110,7 +110,7 @@
                             android:id="@+id/textView"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Senha"
+                            android:text="Usuário"
                             android:textColor="#000000"
                             android:textSize="20sp" />
 
@@ -132,6 +132,7 @@
                         android:layout_weight="3"
                         android:background="@drawable/rounded_corner"
                         android:foreground="?android:attr/selectableItemBackground"
+                        android:onClick="editUser"
                         android:text="SALVAR"
                         android:textSize="20sp" />
 

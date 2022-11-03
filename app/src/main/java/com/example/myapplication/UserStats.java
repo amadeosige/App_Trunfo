@@ -1,23 +1,19 @@
 package com.example.myapplication;
 
 import android.app.ProgressDialog;
-import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Base64;
+import android.view.Gravity;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.AbsListView;
-import android.widget.ArrayAdapter;
-import android.widget.LinearLayout;
-import android.widget.ListView;
-import android.widget.Switch;
+import android.widget.ImageView;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -61,58 +57,19 @@ public class UserStats extends AppCompatActivity {
         });
     }
 
-    public void teste(View v){
-        TableLayout tableLayout = (TableLayout) findViewById(R.id.user_list);
-
-
-        TableRow tr_head = new TableRow(UserStats.this);
-        tr_head.setBackgroundColor(Color.GRAY);
-        tr_head.setLayoutParams(new TableRow.LayoutParams(
-                TableRow.LayoutParams.MATCH_PARENT,
-                TableRow.LayoutParams.MATCH_PARENT));
-
-
-        TextView label_hello = new TextView(UserStats.this);
-        label_hello.setText("AAAA"); // set the text
-        label_hello.setTextColor(Color.WHITE);
-        //label_hello.setLayoutParams(new TableLayout.LayoutParams(TableLayout.LayoutParams.WRAP_CONTENT, TableLayout.LayoutParams.WRAP_CONTENT, 4f));
-        label_hello.setWidth(300);
-        label_hello.setHeight(50);
-
-        TextView label_android = new TextView(UserStats.this);
-        label_android.setText("FDFDFS"); // set the textlabel_android.setTextColor(Color.WHITE); // set the color
-        //label_android.setLayoutParams(new TableLayout.LayoutParams(TableLayout.LayoutParams.WRAP_CONTENT, TableLayout.LayoutParams.WRAP_CONTENT, 4f));
-        label_android.setWidth(300);
-        label_android.setHeight(50);
-
-        TextView label_teste = new TextView(UserStats.this);
-        label_teste.setText("BBBBBB"); // set the text
-        label_teste.setWidth(300);
-        label_teste.setHeight(50);
-
-        tr_head.addView(label_hello);// add the column to the table row
-        tr_head.addView(label_android);
-        tr_head.addView(label_teste);
-
-
-        tableLayout.addView(tr_head, new TableLayout.LayoutParams(
-                TableLayout.LayoutParams.MATCH_PARENT,
-                TableLayout.LayoutParams.MATCH_PARENT));
-    }
-
     private class GetJson extends AsyncTask<Void, Void, ArrayList<UserModel>> {
 
         @Override
         protected void onPreExecute(){
             load = ProgressDialog.show(UserStats.this,
-                    "Por favor Aguarde ...", "Recuperando Informações do Servidor...");
+                    "Por favor Aguarde ...", "Buscando Usuários...");
         }
 
         @Override
         protected ArrayList<UserModel> doInBackground(Void... params) {
             Utils util = new Utils();
 
-            return util.getUserJson("http://10.0.2.2:3000/user/listUser");
+            return util.getUserJsonList("http://10.0.2.2:3000/user/listUser");
             //esse ip é o que o android identifica como o localhost do meu pc
         }
 
@@ -126,46 +83,51 @@ public class UserStats extends AppCompatActivity {
 
                 TableLayout tableLayout = (TableLayout) findViewById(R.id.user_list);
 
-                TableRow tr_head = new TableRow(UserStats.this);
-                tr_head.setBackgroundColor(Color.GRAY);
-                tr_head.setLayoutParams(new TableRow.LayoutParams(
+                TableRow tableRow = new TableRow(UserStats.this);
+                tableRow.setBackgroundColor(Color.GRAY);
+                tableRow.setLayoutParams(new TableRow.LayoutParams(
                         TableRow.LayoutParams.MATCH_PARENT,
                         TableRow.LayoutParams.MATCH_PARENT));
+                tableRow.setPadding(0,10,0,10);
+
 
 
                 TextView label_hello = new TextView(UserStats.this);
                 label_hello.setText(user.get(i).getRanking()); // set the text
                 label_hello.setTextColor(Color.WHITE);
-                //label_hello.setLayoutParams(new TableLayout.LayoutParams(TableLayout.LayoutParams.WRAP_CONTENT, TableLayout.LayoutParams.WRAP_CONTENT, 4f));
-                label_hello.setWidth(300);
-                label_hello.setHeight(50);
+                label_hello.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT, TableRow.LayoutParams.WRAP_CONTENT, 4f));
+                label_hello.setGravity(Gravity.CENTER);
+                label_hello.setHeight(100);
 
-                TextView label_android = new TextView(UserStats.this);
-                label_android.setText(user.get(i).getUserName()); // set the textlabel_android.setTextColor(Color.WHITE); // set the color
-                //label_android.setLayoutParams(new TableLayout.LayoutParams(TableLayout.LayoutParams.WRAP_CONTENT, TableLayout.LayoutParams.WRAP_CONTENT, 4f));
-                label_android.setWidth(300);
-                label_android.setHeight(50);
+
+                ImageView imageViewAVatar = new ImageView(UserStats.this);
+                imageViewAVatar.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT, TableRow.LayoutParams.WRAP_CONTENT,4f));
+                byte[] decodedString = Base64.decode(user.get(i).getImage(), Base64.DEFAULT);
+                Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
+                imageViewAVatar.getLayoutParams().height = 100;
+                imageViewAVatar.getLayoutParams().width = 100;
+                TableRow.LayoutParams params = (TableRow.LayoutParams) imageViewAVatar.getLayoutParams();
+                params.gravity = Gravity.CENTER;
+                imageViewAVatar.setLayoutParams(params);
+                imageViewAVatar.setImageBitmap(decodedByte);
+
 
                 TextView label_teste = new TextView(UserStats.this);
-                label_teste.setText("BBBBBB"); // set the text
-                label_teste.setWidth(300);
-                label_teste.setHeight(50);
-
-                tr_head.addView(label_hello);// add the column to the table row
-                tr_head.addView(label_android);
-                tr_head.addView(label_teste);
+                label_teste.setText(user.get(i).getUserName()); // set the text
+                label_teste.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT, TableRow.LayoutParams.WRAP_CONTENT, 4f));
+                label_teste.setGravity(Gravity.CENTER);
+                label_teste.setHeight(100);
 
 
-                tableLayout.addView(tr_head, new TableLayout.LayoutParams(
+                tableRow.addView(label_hello);
+                tableRow.addView(imageViewAVatar);
+                tableRow.addView(label_teste);
+
+                tableLayout.addView(tableRow, new TableLayout.LayoutParams(
                         TableLayout.LayoutParams.MATCH_PARENT,
                         TableLayout.LayoutParams.MATCH_PARENT));
 
             }
-
-
-
-
-
             load.dismiss();
         }
     }
