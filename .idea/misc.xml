@@ -3,6 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/amade/AndroidStudioProjects/App_Trunfo/app/src/main/res/drawable/ic_launcher_background.xml" value="0.158" />
+        <entry key="..\:/Users/amade/AndroidStudioProjects/App_Trunfo/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/amade/AndroidStudioProjects/App_Trunfo/app/src/main/res/layout/battle.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/amade/AndroidStudioProjects/App_Trunfo/app/src/main/res/layout/choose_card.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/amade/AndroidStudioProjects/App_Trunfo/app/src/main/res/layout/content_main.xml" value="0.1" />
+        <entry key="..\:/Users/amade/AndroidStudioProjects/App_Trunfo/app/src/main/res/layout/lembrete_item_layout.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/amade/AndroidStudioProjects/App_Trunfo/app/src/main/res/layout/pessoa.xml" value="0.264" />
+        <entry key="..\:/Users/amade/AndroidStudioProjects/App_Trunfo/app/src/main/res/layout/start_play.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/amade/AndroidStudioProjects/App_Trunfo/app/src/main/res/layout/user_stats.xml" value="0.4" />
+        <entry key="..\:/Users/amade/AndroidStudioProjects/App_Trunfo/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.158" />
         <entry key="..\:/Users/zanon/AndroidStudioProjects/MyApplication2/app/src/main/res/drawable-anydpi/ic_user.xml" value="0.3515" />
         <entry key="..\:/Users/zanon/AndroidStudioProjects/MyApplication2/app/src/main/res/drawable/bg_switch.xml" value="0.3555" />
         <entry key="..\:/Users/zanon/AndroidStudioProjects/MyApplication2/app/src/main/res/drawable/nav_item_color_state.xml" value="0.3305" />
