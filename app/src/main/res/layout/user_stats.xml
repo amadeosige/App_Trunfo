@@ -16,18 +16,6 @@
         app:itemTextColor="@drawable/nav_item_color_state"
         app:menu="@menu/bottom_navigation_menu" />
 
-    <ToggleButton
-        android:id="@+id/toggleButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:onClick="teste"
-        android:text="ToggleButton"
-        android:textOff="HISTÓRICO"
-        android:textOn="RANKING" />
-
     <TableLayout
         android:id="@+id/Table1"
         android:layout_width="match_parent"

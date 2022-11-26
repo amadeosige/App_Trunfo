@@ -20,11 +20,12 @@ public class Globals {
 
     }
 
+
     public String getUsername() {
         return userName;
     }
 
-    public void setValue(String userName) {
+    public void setUsername(String userName) {
         this.userName = userName;
     }
 }

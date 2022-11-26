@@ -6,6 +6,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -43,7 +44,29 @@ public class StartPlay extends AppCompatActivity {
     }
 
     public void startPlay(View v){
-        Intent chooseCardsScreen = new Intent(this, ChooseCards.class);
-        startActivity(chooseCardsScreen);
+        int id = v.getId();
+        int quantity = 0;
+
+        switch (id){
+            case R.id.button7: {
+                quantity = 1;
+                break;
+            }
+            case R.id.button8: {
+                quantity = 3;
+                break;
+            }
+            case R.id.button9: {
+                quantity = 5;
+                break;
+            }
+            default:
+                break;
+        }
+
+
+        Intent i = new Intent(StartPlay.this, ChooseCards.class);
+        i.putExtra("quantity",quantity);
+        startActivity(i);
     }
 }

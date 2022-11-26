@@ -64,6 +64,7 @@
                             android:layout_height="match_parent"
                             android:adjustViewBounds="false"
                             android:cropToPadding="false"
+                            android:onClick="changeImage"
                             android:scaleType="centerCrop"
                             tools:srcCompat="@drawable/cidade_e_municipio_og" />
                     </androidx.cardview.widget.CardView>

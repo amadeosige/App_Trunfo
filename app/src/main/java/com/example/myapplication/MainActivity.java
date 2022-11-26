@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
             }
 
             Globals sharedData = Globals.getInstance();
-            sharedData.setValue(user.getUserName());
+            sharedData.setUsername(user.getUserName());
 
             Intent telaSucesso = new Intent(MainActivity.this, UserEdit.class);
             startActivity(telaSucesso);
