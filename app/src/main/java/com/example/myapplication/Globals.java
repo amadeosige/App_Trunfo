@@ -14,6 +14,8 @@ public class Globals {
     }
 
     private String userName;
+    private GameCards game;
+
 
 
     private Globals() {
@@ -27,5 +29,13 @@ public class Globals {
 
     public void setUsername(String userName) {
         this.userName = userName;
+    }
+
+    public GameCards getGame() {
+        return game;
+    }
+
+    public void setGame(GameCards game) {
+        this.game = game;
     }
 }
