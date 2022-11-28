@@ -91,7 +91,7 @@ public class UserEdit extends AppCompatActivity {
 
             ImageView userImage = (ImageView) findViewById(R.id.imageView);
 
-            String base64Decoded = UrlDecodeBase64(user.getImage());
+            String base64Decoded = Utils.UrlDecodeBase64(user.getImage());
             byte[] decodedString = Base64.decode(base64Decoded, Base64.DEFAULT);
             Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
             userImage.setImageBitmap(decodedByte);
@@ -166,16 +166,6 @@ public class UserEdit extends AppCompatActivity {
 
             load.dismiss();
         }
-    }
-
-    public static String UrlEncodeBase64(String base64Input)
-    {
-        return base64Input.replace('+', '.').replace('/', '_').replace('=', '-');
-    }
-
-    public static String UrlDecodeBase64(String encodedBase64Input)
-    {
-        return encodedBase64Input.replace('.', '+').replace('_', '/').replace('-', '=');
     }
 
     public void editUser (View v){

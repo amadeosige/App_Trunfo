@@ -28,6 +28,9 @@
         <activity android:name=".UserStats"  />
         <activity android:name=".StartPlay"  />
         <activity android:name=".ChooseCards"  />
+        <activity android:name=".Battle"  />
+        <activity android:name=".FinishedBattle"  />
+
     </application>
 
 </manifest>

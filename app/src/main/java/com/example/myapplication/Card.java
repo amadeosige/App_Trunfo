@@ -61,8 +61,8 @@ public class Card {
             return occupation;
         }
 
-        public Image getImage() {
-            return imageObject;
+        public String getImage() {
+            return imageObject.url;
         }
 
         public void setId(String id) {
