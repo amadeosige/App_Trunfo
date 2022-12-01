@@ -40,7 +40,7 @@ public class StartPlay extends AppCompatActivity {
             }
         });
     }
-    //t
+    //td
 
     public void startPlay(View v){
         Intent chooseCardsScreen = new Intent(this, ChooseCards.class);
